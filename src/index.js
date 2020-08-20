@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Bin2Dec from './pages/Bin2Dec';
+
+import './styles/reset.css';
 import App from './App';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" component={App} exact />
+      <Route path="/bin2dec" component={Bin2Dec} />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
