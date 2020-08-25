@@ -13,8 +13,12 @@ function WrapperDefault({ children }) {
   );
 }
 
+WrapperDefault.defaultProps = {
+  children: <div />,
+};
+
 WrapperDefault.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element,
 };
 
 export default WrapperDefault;

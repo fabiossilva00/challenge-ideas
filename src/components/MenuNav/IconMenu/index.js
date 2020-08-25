@@ -7,9 +7,11 @@ const IconMenu = styled.img.attrs((props) => ({ src: !props.open ? menu : arrowC
     padding: 10px;
     cursor: pointer;
     transition: transform 100ms linear;
+    position: absolute;
 
     ${({ open }) => open && css`
-        transform: translateX(10.8vw)
+        transform: translateX(10.8vw);
+        position: relative;
     `};
 `;
 

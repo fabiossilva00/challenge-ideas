@@ -28,8 +28,12 @@ function MenuNav({ children }) {
   );
 }
 
+MenuNav.defaultProps = {
+  children: <div />,
+};
+
 MenuNav.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element,
 };
 
 export default MenuNav;
